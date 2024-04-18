@@ -1,1 +1,1 @@
-$env:newscotizeps_ver = 
+newscotizeps_ver = 
