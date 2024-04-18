@@ -1,4 +1,4 @@
-Start-Process -FilePath powershell.exe -ArgumentList "$HOME\Documents\WindowsPowerShell\scotizeps.ps1" -NoNewWindow -Wait
+& "$HOME\Documents\WindowsPowerShell\scotizeps.ps1"
 Import-Module $env:ChocolateyInstall\helpers\chocolateyProfile.psm1
 refreshenv
 function au {
@@ -173,5 +173,5 @@ function fdns {
 }
 
 function scotize {
-    Start-Process -FilePath powershell.exe -ArgumentList "$HOME\Documents\WindowsPowerShell\scotizeps.ps1" -NoNewWindow -Wait
+    & "$HOME\Documents\WindowsPowerShell\scotizeps.ps1"
 }
