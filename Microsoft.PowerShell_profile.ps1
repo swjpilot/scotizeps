@@ -1,4 +1,4 @@
-Start-Process -FilePath powershell.exe -ArgumentList "$HOME\Documents\WindowsPowerShell\scotize.ps1" -NoNewWindow
+Start-Process -FilePath powershell.exe -ArgumentList "$HOME\Documents\WindowsPowerShell\scotizeps.ps1" -NoNewWindow
 
 function au {
     choco upgrade all
@@ -169,4 +169,8 @@ function awsc {
 
 function fdns {
     c:\ProgramData\RunElevated.exe ipconfig /flushdns
+}
+
+function scotize {
+    Start-Process -FilePath powershell.exe -ArgumentList "$HOME\Documents\WindowsPowerShell\scotizeps.ps1" -NoNewWindow    
 }
