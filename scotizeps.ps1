@@ -1,4 +1,4 @@
-$env:scotizeps_ver = 15
+$env:scotizeps_ver = 14
 Import-Module $env:ChocolateyInstall\helpers\chocolateyProfile.psm1
 Invoke-WebRequest -Uri https://s3.amazonaws.com/thejohnweb/scotizeps/versions.ps1 -Outfile "$HOME\Documents\WindowsPowerShell\versions.ps1"
 if (Test-Path "$HOME\Documents\WindowsPowerShell\versions.ps1") {
