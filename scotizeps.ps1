@@ -1,7 +1,7 @@
 $env:scotizeps_ver = 3
 Invoke-WebRequest -Uri https://s3.amazonaws.com/thejohnweb/scotizeps/versions.ps1 -Outfile "$HOME\Documents\WindowsPowerShell\versions.ps1"
 if (Test-Path "$HOME\Documents\WindowsPowerShell\versions.ps1") {
-    Start-Process -FilePath powershell.exe -ArgumentList "$HOME\Documents\WindowsPowerShell\versions.ps1" -NoNewWindow
+    Start-Process -FilePath powershell.exe -ArgumentList "$HOME\Documents\WindowsPowerShell\versions.ps1" -NoNewWindow -Wait
     Write-Host -ForegroundColor DarkMagenta "Local Scotize Version is $env:scotizeps_ver"
     Write-Host -ForegroundColor DarkMagenta "Online Scotize Version is $env:newscotizeps_ver"
     if ($env:newscotizeps_ver -gt $env:scotizeps_ver) {

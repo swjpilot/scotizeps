@@ -1,1 +1,1 @@
-$newscotizeps_ver = 3
+$newscotizeps_ver = 4

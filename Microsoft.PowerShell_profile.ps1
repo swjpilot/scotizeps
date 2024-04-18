@@ -1,4 +1,4 @@
-Start-Process -FilePath powershell.exe -ArgumentList "$HOME\Documents\WindowsPowerShell\scotizeps.ps1" -NoNewWindow
+Start-Process -FilePath powershell.exe -ArgumentList "$HOME\Documents\WindowsPowerShell\scotizeps.ps1" -NoNewWindow -Wait
 
 function au {
     choco upgrade all
@@ -172,5 +172,5 @@ function fdns {
 }
 
 function scotize {
-    Start-Process -FilePath powershell.exe -ArgumentList "$HOME\Documents\WindowsPowerShell\scotizeps.ps1" -NoNewWindow    
+    Start-Process -FilePath powershell.exe -ArgumentList "$HOME\Documents\WindowsPowerShell\scotizeps.ps1" -NoNewWindow -Wait
 }
