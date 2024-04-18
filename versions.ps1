@@ -1,1 +1,1 @@
-$env:newscotizeps_ver = 11
+$env:newscotizeps_ver = 12
