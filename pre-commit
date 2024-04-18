@@ -1,0 +1,8 @@
+#!/bin/sh
+# To enable this hook, rename this file to "pre-commit".
+
+export version=$(git rev-list --count master)
+sed -i "s/scotizeps_ver=[0-9]*\+/scotizeps_ver = $version/g" scotizeps.ps1
+sed -i "s/newscotizeps_ver = [0-9]*\+/newscotizeps_ver = $version/g" versions.ps1
+git add bashrc
+git add versions
