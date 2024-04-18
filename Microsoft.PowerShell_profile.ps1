@@ -1,4 +1,5 @@
 Start-Process -FilePath powershell.exe -ArgumentList "$HOME\Documents\WindowsPowerShell\scotizeps.ps1" -NoNewWindow -Wait
+Import-Module $env:ChocolateyInstall\helpers\chocolateyProfile.psm1
 
 function au {
     choco upgrade all
