@@ -1,1 +1,1 @@
-newscotizeps_ver = 
+newscotizeps_ver = 1
