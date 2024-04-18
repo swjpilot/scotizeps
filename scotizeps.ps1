@@ -1,4 +1,4 @@
-$env:scotizeps_ver = 30
+$env:scotizeps_ver = 31
 Import-Module $env:ChocolateyInstall\helpers\chocolateyProfile.psm1
 Invoke-WebRequest -Uri https://s3.amazonaws.com/thejohnweb/scotizeps/versions.ps1 -Outfile "$HOME\Documents\WindowsPowerShell\versions.ps1"
 if (Test-Path "$HOME\Documents\WindowsPowerShell\versions.ps1") {
@@ -9,6 +9,7 @@ if (Test-Path "$HOME\Documents\WindowsPowerShell\versions.ps1") {
         Write-Host -ForegroundColor DarkGreen "Scotize Version Upgrade Needed"
         Invoke-WebRequest -Uri https://s3.amazonaws.com/thejohnweb/scotizeps/scotizeps.ps1 -Outfile "$HOME\Documents\WindowsPowerShell\scotizeps.ps1"
         Invoke-WebRequest -Uri https://s3.amazonaws.com/thejohnweb/scotizeps/Microsoft.PowerShell_profile.ps1 -Outfile "$HOME\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1"
+        Invoke-WebRequest -Uri https://s3.amazonaws.com/thejohnweb/scotizeps/Microsoft.PowerShell_profile.ps1 -Outfile "$HOME\Documents\PowerShell\Microsoft.PowerShell_profile.ps1"
         $env:scotizeps_ver = $env:newscotizeps_ver
         refreshenv
         Remove-Item -Path "$HOME\Documents\WindowsPowerShell\versions.ps1"
